@@ -54,7 +54,7 @@ Vue.component('logging', {
     id: function(val) {
       if (val) {
         this.is_running = true
-        this.logs = ["Let the dream begin!"]
+        this.logs = ["Let the dream begin! This may take a while..."]
         this.getstats() // kickstart the logging
       }
     },

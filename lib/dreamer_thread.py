@@ -14,7 +14,6 @@ class Dreamer(Thread):
 
   def run(self):
     output_path = 'tmp/'+self.name
-    print 'output = ' + output_path
     with graph.as_default():
       dream.start(self.img_file, output=output_path, stdout=self.logger)
       self.logger.close()
