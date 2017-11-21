@@ -66,12 +66,16 @@ def utility_processor():
 def get_files_list():
   images = []
   for subdir in sorted(os.listdir('static/images')):
-    files = os.listdir(os.path.join('static', 'images', subdir))
-    for f in files:
-      fullpath = os.path.join('static', 'images', subdir, f)
-      if os.path.isdir(fullpath) == False:
-        # ignore sub-subdirectories
-        images.append(fullpath)
+    subdir_path = os.path.join('static', 'images', subdir)
+    if os.path.isdir(subdir_path):
+      files = os.listdir(subdir_path)
+      for f in files:
+        fullpath = os.path.join('static', 'images', subdir, f)
+        if os.path.isdir(fullpath) == False:
+          # ignore sub-subdirectories
+          images.append(fullpath)
+    else:
+      images.append(subdir_path)
   return images
 
 def unique_identifier():
