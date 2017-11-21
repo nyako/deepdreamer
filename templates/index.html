@@ -48,7 +48,7 @@
         bus.$on('file-selected', function(val) {
           self.filename = val
         })
-        var socket = io.connect(location.href)
+        var socket = io.connect()
         socket.on('connect', function() {
           console.log('socket.io connection established')
           self.socket = socket
