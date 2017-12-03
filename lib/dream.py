@@ -1,3 +1,12 @@
+# This code is a modified version of François Chollet's implementaion:
+# https://github.com/fchollet/keras/blob/master/examples/deep_dream.py
+#
+# No significant changes, except that you can import this code as a module:
+#
+# import dream
+# dream.start('/path/to/image', output='/path/to/new/image')
+#
+
 from __future__ import print_function
 
 from keras.preprocessing.image import load_img, img_to_array
