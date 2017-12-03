@@ -1,4 +1,4 @@
-# This code is a modified version of François Chollet's implementaion:
+# This code is a modified version of Francois Chollet's implementaion:
 # https://github.com/fchollet/keras/blob/master/examples/deep_dream.py
 #
 # No significant changes, except that you can import this code as a module:
